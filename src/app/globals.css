@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scrollbar-gutter: stable;
+}
+
 @theme inline {
   --color-background: #fafaf9;
   --font-sans: var(--font-inter);

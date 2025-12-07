@@ -7,15 +7,17 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/", text: "about" },
   { href: "/projects", text: "projects" },
-  { href: "/art", text: "art" },
+  { href: "/images", text: "images" },
 ];
 
 export default function Navigation() {
   return (
-    <nav className="flex sm:flex-col gap-4 sm:w-36 relative sm:justify-normal justify-end">
-      {links.map((link) => (
-        <Navlink key={link.href} href={link.href} text={link.text} />
-      ))}
+    <nav className="sm:w-36">
+      <ul className="flex sm:flex-col gap-5 sm:justify-normal justify-end sticky sm:top-20 top-6 lg:top-30">
+        {links.map((link) => (
+          <Navlink key={link.href} href={link.href} text={link.text} />
+        ))}
+      </ul>
     </nav>
   );
 }
@@ -28,7 +30,7 @@ function Navlink({ href, text }: { href: string; text: string }) {
     <Link
       href={href}
       className={cn(
-        "text-xl transition relative",
+        "text-lg transition relative",
         isActive ? "text-stone-900" : "text-stone-500 hover:blur-[1px]"
       )}
     >

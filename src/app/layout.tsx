@@ -28,9 +28,9 @@ export default function RootLayout({
         className={`${inter.variable} antialiased bg-background min-h-screen font-sans`}
       >
         <Shockwave />
-        <div className="sm:pt-20 pt-6 lg:pt-30 mx-auto flex-col gap-y-6 sm:gap-y-0 sm:flex-row flex max-w-7xl px-6 gap-x-12">
+        <div className="sm:pt-20 py-6 lg:py-30 flex-col gap-y-6 sm:gap-y-0 sm:flex-row flex justify-center px-12 gap-x-10">
           <Navigation />
-          <main className="mx-auto max-w-3xl w-full">
+          <main className="max-w-3xl w-full">
             <ViewTransition default="crossfade">{children}</ViewTransition>
           </main>
         </div>
